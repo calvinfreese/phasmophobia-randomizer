@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/phasmophobia-randomizer/static/css/main.571bcbcb.css",
+    "main.js": "/phasmophobia-randomizer/static/js/main.5992a2a4.js",
+    "index.html": "/phasmophobia-randomizer/index.html",
+    "main.571bcbcb.css.map": "/phasmophobia-randomizer/static/css/main.571bcbcb.css.map",
+    "main.5992a2a4.js.map": "/phasmophobia-randomizer/static/js/main.5992a2a4.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.571bcbcb.css",
+    "static/js/main.5992a2a4.js"
+  ]
+}
