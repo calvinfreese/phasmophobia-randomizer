@@ -1,129 +1,86 @@
-import React, { useEffect, useState } from "react";
-import { Card } from "../../components/Card/Card"
+import React from "react";
 import styled from 'styled-components';
+import { Link } from "react-router-dom";
 
-const HomePageContainer = styled.div`
-display: flex;
-flex-direction: row;
-justify-content: space-around;
-align-items: center;
-background-color: beige;
-`
-const StyledButton = styled.button`
-    border-radius: 8px;
-    background-color: #01497C;
-    color: #A9D6E5;
-    font-size: 18px;
-    border: 0;
-    padding: 15px;
-    cursor: pointer;
-    height: 50px;
-    box-sizing: border-box;
-    font-family: monospace;
+import { HomeCard } from "../../components/Cards/HomeCard"
 
-    &:hover {
-        background-color: #01243D;
-    }
-`
-
-const SuggestionBox = styled.div`
+const FlexContainer = styled.div`
     display: flex;
+    flex-direction: row;
     justify-content: center;
-    height: 100vh;
-    width: 40vw;
-    float: left;
-    flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
-`
-const ResultsBox = styled.div`
-    float: right;
-    height: 100vh;
-    width: 40vw;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    align-items: center;
+    padding: 0px;
 `
 const StyledText = styled.p`
-    font-family: monospace;
-    font-size: 22px;
-    font-weight: bold;
-    margin: 30px 0 0 0;
-    padding: 0;
-    text-align: center;
+    color: #BBD6E8;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+    padding: 0 10px;
 `
-
-const StyledLi = styled.li`
-    font-family: monospace;
-    font-size: 16px;
+const FlexTextContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px;
+    width: 300px;
+    height: 72px;
 `
-
-
 export const Home = () => {
-    const locations = [
-        "Asylum",
-        "Bleasedale Farmhouse",
-        "Brownstone Highschool",
-        "Edgefield Street House",
-        "Grafton Farmhouse",
-        "Maple Lodge Campsite",
-        "Prison",
-        "Ridgeview Road House",
-        "Tanglewood Street House",
-        "Willow Street House"
-    ]
-    const [randomizedLocation, setRandomizedLocation] = useState('')
-    const [counter, setCounter] = useState(0);
-    const [previousLocations, setPreviousLocations] = useState([]);
-    const [previousSuggestion, setPreviousSuggestion ] = useState('');
-
-    const handleRandomize = () => {
-        const randomLocation = Math.floor(Math.random() * locations.length)
-        setRandomizedLocation(locations[randomLocation])
-        setCounter(counter + 1);
-        
-    }
-
-    useEffect(() => {
-        console.log(previousLocations);
-     
-        if(counter > 0 ) {
-            const locationArray = []
-
-            setPreviousSuggestion(randomizedLocation);
-
-            if(previousLocations.length > 0) {
-                locationArray.push(previousLocations);
-            } 
-            
-            locationArray.unshift(previousSuggestion);
-            const flatLocationArray = locationArray.flat().slice(0,5);
-            setPreviousLocations(flatLocationArray)
-
+    const otherPages = [
+        {
+            key: 1,
+            title: "Locations",
+            path: "/locations",
+        },
+        {
+            key: 2,
+            title: "Ghosts",
+            path: "/ghosts",
+        },
+        {
+            key: 3,
+            title: "Equipment",
+            path: "/equipment",
         }
+    ];
 
-    }, [counter])
-
-    
+    const subtitles = [
+        {
+            key: 1,
+            subtitle: "Haunted by indecision? Let fate decide your next hunt location."
+        },
+        {
+            key: 2,
+            subtitle: "Look up ghosts by their evidence, characteristics, and haunting styles."
+        },
+        {
+            key: 3,
+            subtitle: "Spice up your loadout with a randomly generated list of equipment."
+        },
+    ]
 
     return (
-        <HomePageContainer>
-            <SuggestionBox>
-                <StyledText>Current Suggestion:</StyledText>
-                <Card>{randomizedLocation} </Card>
-                <StyledButton type="button" onClick={handleRandomize}>Randomize Map</StyledButton>
-                <div>
-                    <StyledText>All Locations</StyledText>
-                    <ul>
-                    {locations.map(location => <StyledLi>{location}</StyledLi>)}
-                    </ul>
-                </div>
-            </SuggestionBox>
-            <ResultsBox>
-                <StyledText> Previous Suggestions: </StyledText>
-                {previousLocations.length > 0 && previousLocations.map(location => <Card> {location} </Card>)}
-            </ResultsBox>
-        </HomePageContainer>
+        <>
+            <FlexContainer>
+                { otherPages && 
+                    otherPages.map(page => <Link to={`${page.path}`}><HomeCard key={page.key} title={page.title} /></Link>)
+                }
+            </FlexContainer>
+            <FlexContainer>
+                { subtitles && 
+                        subtitles.map(subtitle => { return (
+                            <FlexTextContainer key={subtitle.key}>
+                                <StyledText>
+                                    {subtitle.subtitle}
+                                </StyledText>
+                            </FlexTextContainer>
+                        )})
+                }
+            </FlexContainer>
+        </>
     )
 }

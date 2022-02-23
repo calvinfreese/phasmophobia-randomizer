@@ -1,21 +1,57 @@
 import React from "react";
 import  styled  from 'styled-components';
+import { Link } from "react-router-dom";
+import { Button } from '../Button/Button';
 
-const StyledHeading = styled.div`
-width: 100%;
-background-color: #01497C;
+const FlexContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0px 60px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 `
 
-const StyledText = styled.h1`
-color: white;
-padding: 0 10px;
-font-family: monospace;
+const TitleContainer = styled.div`
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 0px 60px;
+    color: #E0EAF0;
+`
+const Subtitle = styled.p`
+    font-size: 1.25em;
+    margin: 0;
+`
+
+const Title = styled.p`
+    font-size: 3em;
+    margin: 0;
+`
+
+const NavItemContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding: 9px 10px;
 `
 
 export const Heading = () => {
     return (
-        <StyledHeading>
-            <StyledText>Phasmophobia Randomizer</StyledText>
-        </StyledHeading>
+        <FlexContainer>
+           <TitleContainer>
+               <Link to="/">
+                <Title>Phasmophilia</Title>
+                <Subtitle>your friendly ghost hunting companion</Subtitle>
+               </Link>
+           </TitleContainer>
+           <NavItemContainer>
+                <Link to="/locations"><Button>Locations</Button></Link>
+                <Link to="/ghosts"><Button>Ghosts</Button></Link>
+                <Link to="/equipment"><Button >Equipment</Button></Link>
+           </NavItemContainer>
+        </FlexContainer>
     )
 }
