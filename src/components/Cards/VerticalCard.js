@@ -24,12 +24,6 @@ const ImageBox = styled.div`
     background-repeat: no-repeat;
     background-position: center;
 `
-const Img = styled.img`
-    max-width: 100%;
-    max-height: 100%;
-    margin: auto;
-    display: block;
-`
 
 const ContentBox = styled.div`
     height: 280px;

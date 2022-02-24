@@ -35,16 +35,20 @@ export const Home = () => {
             key: 1,
             title: "Locations",
             path: "/locations",
+            imgUrl: "assets/images/locations/2-prison.png"
         },
         {
             key: 2,
             title: "Ghosts",
             path: "/ghosts",
+            imgUrl: "assets/images/ghosts/0-ghost.png"
+
         },
         {
             key: 3,
             title: "Equipment",
             path: "/equipment",
+            imgUrl: "assets/images/equipment/0-equipment.png"
         }
     ];
 
@@ -67,7 +71,7 @@ export const Home = () => {
         <>
             <FlexContainer>
                 { otherPages && 
-                    otherPages.map(page => <Link to={`${page.path}`}><HomeCard key={page.key} title={page.title} /></Link>)
+                    otherPages.map(page => <Link to={`${page.path}`}><HomeCard key={page.key} title={page.title} imgUrl={page.imgUrl}/></Link>)
                 }
             </FlexContainer>
             <FlexContainer>

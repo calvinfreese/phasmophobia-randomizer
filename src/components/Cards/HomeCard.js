@@ -9,12 +9,19 @@ const GradientOverlay = styled.div`
     align-items: center;
     justify-content: center;
     background: radial-gradient(50% 50% at 50% 50%, rgba(18, 32, 43, 0.4) 0%, rgba(18, 32, 43, 0) 100%);
+
+    &:hover {
+        background:rgba(0,0,0,0.6);
+        border-radius: 30px;
+    }
 `
 const StyledImg = styled.div`
     height: 100%;
     width: 100%;
     filter: drop-shadow(0px 0px 5px rgba(163, 196, 219, 0.4)) drop-shadow(0px 0px 20px rgba(97, 153, 190, 0.4));
     border-radius: 30px;
+    background-size: cover;
+    background-repeat: no-repeat;
 `
 const CardTitle = styled.p`
     color: #E0EAF0;

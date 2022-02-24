@@ -49,7 +49,7 @@ export const Locations = () => {
     }
 
     return (
-        <FlexColumn>LOCATION PAGE!
+        <FlexColumn>
             <MarginBox>
                 {
                     randomizedLocation?.name ? (
