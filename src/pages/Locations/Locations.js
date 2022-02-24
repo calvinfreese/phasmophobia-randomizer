@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from 'styled-components';
 
 import  locations  from '../../data/locations.json';
@@ -47,6 +47,10 @@ export const Locations = () => {
             handleRandomize();
         }
     }
+
+    useEffect(() => {
+        document.title = 'Phasmophilia 👻 | Locations'
+    }, [])
 
     return (
         <FlexColumn>

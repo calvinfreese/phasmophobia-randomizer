@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from 'styled-components';
 import { Link } from "react-router-dom";
 
@@ -66,6 +66,10 @@ export const Home = () => {
             subtitle: "Spice up your loadout with a randomly generated list of equipment."
         },
     ]
+
+    useEffect(() => {
+        document.title = 'Phasmophilia 👻 | Home'
+    }, [])
 
     return (
         <>
