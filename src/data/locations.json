@@ -5,7 +5,8 @@
         "content": {
             "area": "Large",
             "rooms": "111",
-            "floors": "2"
+            "floors": "2",
+            "imgUrl": "assets/images/locations/0-school.png"
         }
     },
     {
@@ -14,7 +15,8 @@
         "content": {
             "area": "Small",
             "rooms": "16",
-            "floors": "3"
+            "floors": "3",
+            "imgUrl": "assets/images/locations/0-school.png"
         }
     },
     {
@@ -23,7 +25,8 @@
         "content": {
             "area": "Medium",
             "rooms": "58",
-            "floors": "2"
+            "floors": "2",
+            "imgUrl": "assets/images/locations/0-school.png"
         }
     },
     {
@@ -32,7 +35,8 @@
         "content": {
             "area": "Small",
             "rooms": "16",
-            "floors": "3"
+            "floors": "3",
+            "imgUrl": "assets/images/locations/0-school.png"
         }
     },
     {
@@ -41,7 +45,8 @@
         "content": {
             "area": "Small",
             "rooms": "13",
-            "floors": "2"
+            "floors": "2",
+            "imgUrl": "assets/images/locations/0-school.png"
         }
     },
     {
@@ -50,7 +55,8 @@
         "content": {
             "area": "Medium",
             "rooms": "25",
-            "floors": "3"
+            "floors": "3",
+            "imgUrl": "assets/images/locations/0-school.png"
         }
     },
     {
@@ -59,7 +65,8 @@
         "content": {
             "area": "Medium",
             "rooms": "29",
-            "floors": "2"
+            "floors": "2",
+            "imgUrl": "assets/images/locations/2-prison.png"
         }
     },
     {
@@ -68,7 +75,8 @@
         "content" : {
             "area": "Small",
             "rooms": "16",
-            "floors": "3"
+            "floors": "3",
+            "imgUrl": "assets/images/locations/1-ridgeview.png"
         }
     },
     {
@@ -77,7 +85,8 @@
         "content": {
             "area": "Small",
             "rooms": "11",
-            "floors": "2"
+            "floors": "2",
+            "imgUrl": "assets/images/locations/0-school.png"
         }
     },
     {
@@ -86,7 +95,8 @@
         "content": {
             "area": "Small",
             "rooms": "10",
-            "floors": "2"
+            "floors": "2",
+            "imgUrl": "assets/images/locations/0-school.png"
         }
     }
 ]

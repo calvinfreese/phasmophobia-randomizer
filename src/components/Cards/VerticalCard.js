@@ -20,7 +20,17 @@ const ImageBox = styled.div`
     border-radius: 30px 30px 0 0;
     box-sizing: border-box;
     background-color: #12202B;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 `
+const Img = styled.img`
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    display: block;
+`
+
 const ContentBox = styled.div`
     height: 280px;
     width: 300px;
@@ -38,13 +48,12 @@ const StyledTitle = styled.p`
 `
 
 export const VerticalCard = ({title, imgUrl, children}) => {
-   
+    console.log(imgUrl, title)
     return (
     <StyledCard>
         <FlexColumn>
-            <ImageBox>
-                <p>img</p>
-            </ImageBox>
+            <ImageBox style={{ backgroundImage: `url(${imgUrl})`}} />
+        
             <ContentBox>
                 <div style={{height: '55px', marginTop: '20px'}}>
                     <StyledTitle>{title}</StyledTitle>

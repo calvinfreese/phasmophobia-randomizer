@@ -53,7 +53,7 @@ export const Locations = () => {
             <MarginBox>
                 {
                     randomizedLocation?.name ? (
-                        <VerticalCard title={randomizedLocation.name}>                             
+                        <VerticalCard title={randomizedLocation.name} imgUrl={randomizedLocation.content.imgUrl}>                             
                             <Content>
                                 <p>Area: </p>
                                 <ContentBubble>{randomizedLocation.content.area}</ContentBubble>
@@ -74,7 +74,7 @@ export const Locations = () => {
             <MarginBox>
                 <FlexRow>
                     {locations &&
-                        locations.map(location => <VerticalCard key={location.key} title={location.name}>
+                        locations.map(location => <VerticalCard key={location.key} title={location.name} imgUrl={location.content?.imgUrl}>
                             <Content>
                                 <p>Area: </p>
                                 <ContentBubble>{location.content.area}</ContentBubble>
