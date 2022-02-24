@@ -67,7 +67,7 @@ export const Locations = () => {
                                 <ContentBubble>{randomizedLocation.content.rooms}</ContentBubble>
                             </Content>
                         </VerticalCard>
-                    ) : <VerticalCard title="?" content={{area: "?", floors: "?", rooms: "?"}} />
+                    ) : <VerticalCard title="?"/>
                 }
                 <Button onClick={() => handleRandomize()}>Draw a location card</Button>
             </MarginBox>

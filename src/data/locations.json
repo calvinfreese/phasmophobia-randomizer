@@ -1,0 +1,92 @@
+[
+    {
+        "id": 1,
+        "name": "Aslyum",
+        "content": {
+            "area": "Large",
+            "rooms": "111",
+            "floors": "2"
+        }
+    },
+    {
+        "id": 2,
+        "name": "Bleasedale Farmhouse",
+        "content": {
+            "area": "Small",
+            "rooms": "16",
+            "floors": "3"
+        }
+    },
+    {
+        "id": 3,
+        "name": "Brownstone Highschool",
+        "content": {
+            "area": "Medium",
+            "rooms": "58",
+            "floors": "2"
+        }
+    },
+    {
+        "id": 4,
+        "name": "Edgefield Street House",
+        "content": {
+            "area": "Small",
+            "rooms": "16",
+            "floors": "3"
+        }
+    },
+    {
+        "id": 5,
+        "name": "Grafton Farmhouse",
+        "content": {
+            "area": "Small",
+            "rooms": "13",
+            "floors": "2"
+        }
+    },
+    {
+        "id": 6,
+        "name": "Maple Lodge Campsite",
+        "content": {
+            "area": "Medium",
+            "rooms": "25",
+            "floors": "3"
+        }
+    },
+    {
+        "id": 7,
+        "name": "Prison",
+        "content": {
+            "area": "Medium",
+            "rooms": "29",
+            "floors": "2"
+        }
+    },
+    {
+        "id": 8,
+        "name": "Ridgeview Road House",
+        "content" : {
+            "area": "Small",
+            "rooms": "16",
+            "floors": "3"
+        }
+    },
+    {
+        "id": 9,
+        "name": "Tanglewood Street House",
+        "content": {
+            "area": "Small",
+            "rooms": "11",
+            "floors": "2"
+        }
+    },
+    {
+        "id": 10,
+        "name": "Willow Street House",
+        "content": {
+            "area": "Small",
+            "rooms": "10",
+            "floors": "2"
+        }
+    }
+]

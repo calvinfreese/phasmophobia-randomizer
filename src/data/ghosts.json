@@ -1,0 +1,170 @@
+[
+    {
+        "name": "Banshee",
+        "evidence": [
+            "D.O.T.S Projector",
+            "Fingerprints",
+            "Ghost Orbs"
+        ]
+    },
+    {
+        "name": "Demon",
+        "evidence": [
+            "Fingerprints",
+            "Freezing Temperatures",
+            "Ghost Writing"
+        ]
+    },
+    {
+        "name": "Goryo",
+        "evidence": [
+            "D.O.T.S Projector",
+            "EMF Level 5",
+            "Fingerprints"
+        ]
+    },
+    {
+        "name": "Hantu",
+        "evidence": [
+            "Fingerprints",
+            "Freezing Temperatures",
+            "Ghost Orbs"
+        ]
+    },
+    {
+        "name": "Jinn",
+        "evidence": [
+            "EMF Level 5",
+            "Fingerprints",
+            "Spirit Box"
+        ]
+    },
+    {
+        "name": "Mare",
+        "evidence": [
+            "Ghost Orbs",
+            "Ghost Writing",
+            "Spirit Box"
+        ]
+    },
+    {
+        "name": "Myling",
+        "evidence": [
+            "Fingerprints",
+            "EMF Level 5",
+            "Ghost Writing"
+        ]
+    },
+    {
+        "name": "Obake",
+        "evidence": [
+            "Fingerprints",
+            "EMF Level 5",
+            "Ghost Orbs"
+        ]
+    },
+    {
+        "name": "Oni",
+        "evidence": [
+            "D.O.T.S Projector",
+            "EMF Level 5",
+            "Freezing Temperatures"
+        ]
+    },
+    {
+        "name": "Onryo",
+        "evidence": [
+            "Freezing Temperatures",
+            "Ghost Orbs",
+            "Spirit Box"
+        ]
+    },
+    {
+        "name": "Phantom",
+        "evidence": [
+            "D.O.T.S Projector",
+            "Fingerprints",
+            "Spirit Box"
+        ]
+    },
+    {
+        "name": "Poltergeist",
+        "evidence": [
+            "Fingerprints",
+            "Ghost Writing",
+            "Spirit Box"
+        ]
+    },
+    {
+        "name": "Raiju",
+        "evidence": [
+            "D.O.T.S Projector",
+            "EMF Level 5",
+            "Ghost Orbs"
+        ]
+    },
+    {
+        "name": "Revenant",
+        "evidence": [
+            "Ghost Writing",
+            "Freezing Temperatures",
+            "Ghost Orbs"
+        ]
+    },
+    {
+        "name": "Shade",
+        "evidence": [
+            "Freezing Temperatures",
+            "EMF Level 5",
+            "Ghost Writing"
+        ]
+    },
+    {
+        "name": "Spirit",
+        "evidence": [
+            "Ghost Writing",
+            "EMF Level 5",
+            "Spirit Box"
+        ]
+    },
+    {
+        "name": "The Twins",
+        "evidence": [
+            "Spirit Box",
+            "EMF Level 5",
+            "Freezing Temperatures"
+        ]
+    },
+    {
+        "name": "The Mimic",
+        "evidence": [
+            "Freezing Temperatures",
+            "Fingerprints",
+            "Spirit Box"
+        ]
+    },
+    {
+        "name": "Wraith",
+        "evidence": [
+            "D.O.T.S Projector",
+            "EMF Level 5",
+            "Spirit Box"
+        ]
+    },
+    {
+        "name": "Yokai",
+        "evidence": [
+            "D.O.T.S Projector",
+            "Ghost Orbs",
+            "Spirit Box"
+        ]
+    },
+    {
+        "name": "Yurei",
+        "evidence": [
+            "D.O.T.S Projector",
+            "Freezing Temperatures",
+            "Ghost Orbs"
+        ]
+    }
+]
