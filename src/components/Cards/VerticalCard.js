@@ -13,10 +13,10 @@ const FlexColumn = styled.div`
 `
 
 const ImageBox = styled.div`
-    height: 170px;
+    height: 168px;
     width: 300px;
-    border: 2px solid #6199BE;
-    border-bottom: 2px solid #030B10;
+    border-left: 2px solid #6199BE;
+    border-right: 2px solid #6199BE;
     border-radius: 30px 30px 0 0;
     box-sizing: border-box;
     background-color: #12202B;
