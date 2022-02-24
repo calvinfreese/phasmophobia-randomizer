@@ -9,7 +9,7 @@ const FlexColumn = styled.div`
     align-items: center;
     padding: 0px;
     color: #E0EAF0;
-    
+    height: 100%;
 `
 
 const ImageBox = styled.div`
@@ -27,35 +27,17 @@ const ContentBox = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-`
+    `
 const StyledTitle = styled.p`
     color: #BBD6E8;
     font-size: 1.5em;
     line-height: 24px;
     text-align: center;
-    margin-top: 15px;
-`
-const Content = styled.div`
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 175px;
+    margin: 0;
+    padding-bottom: 0;
 `
 
-const Bubble = styled.button`
-    border-radius: 30px;
-    padding: 10px 10px 5px;
-    border: 2px solid #E0EAF0;
-    background-color: transparent;
-    color: #E0EAF0;
-    box-sizing: border-box;
-    font-size: 16px;
-    line-height: 16px;
-    font-family: Special Elite;
-
-`
-
-export const VerticalCard = ({title, imgUrl, content}) => {
+export const VerticalCard = ({title, imgUrl, children}) => {
    
     return (
     <StyledCard>
@@ -64,10 +46,10 @@ export const VerticalCard = ({title, imgUrl, content}) => {
                 <p>img</p>
             </ImageBox>
             <ContentBox>
-                <StyledTitle>{title}</StyledTitle>
-                <Content><p>Area</p><Bubble>{content?.area || ""}</Bubble></Content>
-                <Content><p>Floors</p><Bubble>{content?.floors || ""}</Bubble></Content>
-                <Content><p>Rooms</p><Bubble>{content?.rooms || ""}</Bubble></Content>
+                <div style={{height: '55px', marginTop: '20px'}}>
+                    <StyledTitle>{title}</StyledTitle>
+                </div>
+                {children}
             </ContentBox>
         </FlexColumn>
     </StyledCard>
