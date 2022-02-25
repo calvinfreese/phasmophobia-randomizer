@@ -10,7 +10,7 @@ import { Ghosts } from './pages/Ghosts/Ghosts';
 import { Equipment } from './pages/Equipment/Equipment';
 
 
-const PageContainer = styled.div`
+const MainContainer = styled.div`
   display: flex;
   flex-direction: column;
   padding: 0px;
@@ -18,18 +18,24 @@ const PageContainer = styled.div`
   min-height: 100vh;
   box-sizing: border-box;
 `
+const Body = styled.div`
+  padding-bottom: 35px;
+  flex: 1 0 auto;
+`
 
 function App() {
   return (
-    <PageContainer >
+    <MainContainer >
       <Heading />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/locations" element={<Locations />} />
-        <Route path="/ghosts" element={<Ghosts />} />
-        <Route path="/equipment" element={<Equipment />} />
-      </Routes>
-    </PageContainer>
+      <Body>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/locations" element={<Locations />} />
+          <Route path="/ghosts" element={<Ghosts />} />
+          <Route path="/equipment" element={<Equipment />} />
+        </Routes>
+      </Body>
+    </MainContainer>
   );
 }
 

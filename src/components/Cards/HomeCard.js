@@ -1,6 +1,7 @@
 import React from "react";
 import styled from 'styled-components';
 import { StyledCardHover } from "./common/common";
+import { Link } from "react-router-dom";
 
 const GradientOverlay = styled.div`
     height: 100%;
@@ -30,15 +31,40 @@ const CardTitle = styled.p`
     line-height: 30px;
     text-align: center;
 `
+const StyledText = styled.p`
+    color: #BBD6E8;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+    margin: 0;
+    width: 280px;
+    word-break: break-word;
+    text-align:center;
+`
+const Container = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 300px;
+    height: 600px;
+    margin: 0 10px;
+`
 
-export const HomeCard = ({ title, imgUrl }) => {
+export const HomeCard = ({ title, path, imgUrl, caption }) => {
     return (
-            <StyledCardHover>
-                <StyledImg style={{ background: `url(${imgUrl})`}}>
-                    <GradientOverlay>
-                        <CardTitle>{title}</CardTitle>                    
-                    </GradientOverlay>
-                </StyledImg>
-            </StyledCardHover>
+        <Container>
+            <Link to={path}>
+                <StyledCardHover>
+                    <StyledImg style={{ background: `url(${imgUrl})`}}>
+                        <GradientOverlay>
+                            <CardTitle>{title}</CardTitle>                    
+                        </GradientOverlay>
+                    </StyledImg>
+                </StyledCardHover>
+            </Link>
+            <StyledText>{caption}</StyledText>
+        </Container>
     )
 }

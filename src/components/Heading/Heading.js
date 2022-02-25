@@ -3,55 +3,94 @@ import  styled  from 'styled-components';
 import { Link } from "react-router-dom";
 import { Button } from '../Button/Button';
 
+const HeadingContainer = styled.div`
+    height: 100%;
+    padding-top: 25px;
+    margin-bottom: 20px;
+    padding-bottom: 50px;
+
+`
+const PaddedDiv = styled.div`
+    max-width: 1200px;
+    margin 0 auto;
+
+`
 const FlexContainer = styled.div`
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding: 0px 60px;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    flex: 1 1 0;
+    flex-wrap: wrap;
+    box-sizing: border-box;
 `
 
-const TitleContainer = styled.div`
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-    margin: 0px 60px;
+const Flex50 = styled.div`
+    flex: 0 0 50%;
+    flex-wrap: wrap;
+    width: 50%;
     color: #E0EAF0;
-`
-const Subtitle = styled.p`
-    font-size: 1.25em;
-    margin: 0;
+    box-sizing: border-box;
+
+    @media (max-width: 450px) {
+        flex: 0 0 100%;
+    }
 `
 
 const Title = styled.p`
-    font-size: 3em;
+    font-size: 2.5rem;
     margin: 0;
+
+    @media (max-width: 450px) {
+        text-align: center;
+        padding: 0 5px;
+    }
+`
+const Subtitle = styled(Title)`
+    font-size: 1.25rem;
 `
 
 const NavItemContainer = styled.div`
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: flex-start;
-    padding: 9px 10px;
+
+    justify-content: flex-end;
+
+    @media (max-width: 950px) {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 10px;
+    }
+
+    @media (max-width: 450px) {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin-top: 15px;
+
+        a button {
+            margin: 0;
+        }
+    }
 `
 
 export const Heading = () => {
     return (
-        <FlexContainer>
-           <TitleContainer>
-               <Link to="/">
-                <Title>Phasmophilia</Title>
-                <Subtitle>your friendly ghost hunting companion</Subtitle>
-               </Link>
-           </TitleContainer>
-           <NavItemContainer>
-                <Link to="/locations"><Button>Locations</Button></Link>
-                <Link to="/ghosts"><Button>Ghosts</Button></Link>
-                <Link to="/equipment"><Button >Equipment</Button></Link>
-           </NavItemContainer>
-        </FlexContainer>
+        <HeadingContainer>
+            <PaddedDiv>
+                <FlexContainer>
+                    <Flex50>
+                        <Link to="/">
+                            <Title>Phasmophilia</Title>
+                            <Subtitle>your friendly ghost hunting companion</Subtitle>
+                        </Link>
+                    </Flex50>
+                    
+                    <Flex50>
+                        <NavItemContainer>
+                            <Link to="/locations"><Button>Locations</Button></Link>
+                            <Link to="/ghosts"><Button>Ghosts</Button></Link>
+                            <Link to="/equipment"><Button >Equipment</Button></Link>
+                        </NavItemContainer>
+                    </Flex50>
+                </FlexContainer>
+            </PaddedDiv>
+        </HeadingContainer>
     )
 }
