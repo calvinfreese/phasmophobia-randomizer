@@ -19,7 +19,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "prettier-watch": "onchange \"**/*\" -- prettier --write --ignore-unknown {{changed}}"
   },
   "eslintConfig": {
     "extends": [
@@ -40,6 +41,8 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^3.2.3"
+    "eslint-config-prettier": "^8.5.0",
+    "gh-pages": "^3.2.3",
+    "prettier": "2.5.1"
   }
 }
